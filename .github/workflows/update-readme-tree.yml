@@ -5,8 +5,11 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  build:
+  update-tree:
     runs-on: ubuntu-latest
 
     steps:
@@ -17,28 +20,26 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y tree
 
       - name: Generate folder structure
-        run: |
-          tree -I ".git|node_modules|vendor|__pycache__" > repo_tree.txt
+        run: tree -I ".git|node_modules|vendor|__pycache__" > repo_tree.txt
 
-      - name: Update README.md
+      - name: Update README
         run: |
           START="<!-- TREE START -->"
           END="<!-- TREE END -->"
-          TREE_CONTENT=$(sed 's/[&/\]/\\&/g' repo_tree.txt)
+          TREE_CONTENT="$(printf '```\n%s\n```' "$(cat repo_tree.txt)")"
 
-          awk -v start="$START" -v end="$END" -v content="```\\n$TREE_CONTENT\\n```" '
-          $0==start {print; print content; found=1; next}
-          $0==end {found=0}
-          !found {print}
-          $0==end {print}
-          ' README.md > README_new.md
+          awk -v start="$START" -v end="$END" -v new="$TREE_CONTENT" '
+            $0 ~ start { print; print new; skip=1; next }
+            $0 ~ end { skip=0 }
+            skip==0 { print }
+          ' README.md > README.new
 
-          mv README_new.md README.md
+          mv README.new README.md
 
-      - name: Commit changes
+      - name: Commit and push changes
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
           git add README.md
-          git commit -m "Auto-update folder structure" || echo "No changes"
+          git commit -m "Auto-update folder structure" || echo "No changes to commit"
           git push
