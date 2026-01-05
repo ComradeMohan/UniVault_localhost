@@ -4,15 +4,6 @@
 ```
 .
 ├── README.md
-├── addCourse.php
-├── addEvent.php
-├── add_college.php
-├── add_college_grades.php
-├── add_course.php
-├── add_department.php
-├── add_event.php
-├── admin_login.php
-├── admin_register.php
 ├── app
 │   ├── build.gradle.kts
 │   ├── google-services - Copy.json
@@ -455,51 +446,14 @@
 │                       └── univault
 │                           └── ExampleUnitTest.kt
 ├── build.gradle.kts
-├── change_password.php
 ├── composer.json
 ├── composer.lock
-├── db.php
-├── db2.php
-├── db_online.php
-├── delete_material.php
 ├── exportToHTML
 │   └── com
 │       └── simats
 │           └── univalut
 │               └── AdminHomeFragment.kt.html
-├── faculty_login.php
-├── faculty_register.php
-├── fetch_courses.php
-├── fetch_courses_by_department.php
-├── fetch_departments_by_college.php
-├── fetch_faculty_college.php
-├── fetch_grades.php
-├── fetch_notices.php
-├── fetch_notifications.php
-├── fetch_student_name.php
-├── fetch_students_by_college.php
-├── forgot_password.php
 ├── get
-├── getAdminDetails.php
-├── getCoursesByCollege.php
-├── getEvents.php
-├── getFacultyByCollege.php
-├── getNextFacultyId.php
-├── get_admin_details.php
-├── get_all_courses.php
-├── get_college_by_faculty.php
-├── get_college_id.php
-├── get_colleges.php
-├── get_courses_by_department.php
-├── get_department_id.php
-├── get_faculty_by_id.php
-├── get_faculty_details.php
-├── get_faculty_name.php
-├── get_grade_points.php
-├── get_latest_notice.php
-├── get_student.php
-├── get_student_department_id.php
-├── get_student_grades.php
 ├── gradle
 │   ├── libs.versions.toml
 │   └── wrapper
@@ -508,33 +462,80 @@
 ├── gradle.properties
 ├── gradlew
 ├── gradlew.bat
-├── list_pdfs.php
-├── login.php
-├── post_notice.php
-├── register-smtp.php
-├── register.php
+├── phpfolder
+│   ├── addCourse.php
+│   ├── addEvent.php
+│   ├── add_college.php
+│   ├── add_college_grades.php
+│   ├── add_course.php
+│   ├── add_department.php
+│   ├── add_event.php
+│   ├── admin_login.php
+│   ├── admin_register.php
+│   ├── change_password.php
+│   ├── db.php
+│   ├── db2.php
+│   ├── db_online.php
+│   ├── delete_material.php
+│   ├── faculty_login.php
+│   ├── faculty_register.php
+│   ├── fetch_courses.php
+│   ├── fetch_courses_by_department.php
+│   ├── fetch_departments_by_college.php
+│   ├── fetch_faculty_college.php
+│   ├── fetch_grades.php
+│   ├── fetch_notices.php
+│   ├── fetch_notifications.php
+│   ├── fetch_student_name.php
+│   ├── fetch_students_by_college.php
+│   ├── forgot_password.php
+│   ├── getAdminDetails.php
+│   ├── getCoursesByCollege.php
+│   ├── getEvents.php
+│   ├── getFacultyByCollege.php
+│   ├── getNextFacultyId.php
+│   ├── get_admin_details.php
+│   ├── get_all_courses.php
+│   ├── get_college_by_faculty.php
+│   ├── get_college_id.php
+│   ├── get_colleges.php
+│   ├── get_courses_by_department.php
+│   ├── get_department_id.php
+│   ├── get_faculty_by_id.php
+│   ├── get_faculty_details.php
+│   ├── get_faculty_name.php
+│   ├── get_grade_points.php
+│   ├── get_latest_notice.php
+│   ├── get_student.php
+│   ├── get_student_department_id.php
+│   ├── get_student_grades.php
+│   ├── list_pdfs.php
+│   ├── login.php
+│   ├── post_notice.php
+│   ├── register-smtp.php
+│   ├── register.php
+│   ├── reset_password.php
+│   ├── student_grades_completed.php
+│   ├── student_grades_pending.php
+│   ├── student_login.php
+│   ├── submit_student_grades.php
+│   ├── upload_material.php
+│   ├── verify.php
+│   └── verify_email.php
 ├── repo_tree.txt
-├── reset_password.php
 ├── settings.gradle.kts
-├── student_grades_completed.php
-├── student_grades_pending.php
-├── student_login.php
-├── submit_student_grades.php
-├── upload_material.php
-├── uploads
-│   └── Saveetha School of Engineering
-│       ├── CSA43
-│       │   └── CSA43-Internet Programming .docx.pdf
-│       ├── EEA0192
-│       │   ├── BEEE-CSE-MCQ-Final.pdf
-│       │   ├── EEA01 BEEE A3 Scanned.pdf
-│       │   └── May 8 Schedule.pdf
-│       └── UBA10
-│           └── Expt 8-14.pdf
-├── verify.php
-└── verify_email.php
+└── uploads
+    └── Saveetha School of Engineering
+        ├── CSA43
+        │   └── CSA43-Internet Programming .docx.pdf
+        ├── EEA0192
+        │   ├── BEEE-CSE-MCQ-Final.pdf
+        │   ├── EEA01 BEEE A3 Scanned.pdf
+        │   └── May 8 Schedule.pdf
+        └── UBA10
+            └── Expt 8-14.pdf
 
-47 directories, 484 files
+48 directories, 484 files
 ```
 <!-- TREE END -->
 <!-- TREE END -->
